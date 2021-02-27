@@ -1,0 +1,9 @@
+.vscode
+node_modules
+package-lock.json
+*.cache
+*.pnp
+*.pnp.js
+*.ini
+*.DS_Store
+*.log

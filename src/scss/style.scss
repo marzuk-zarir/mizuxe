@@ -1,0 +1,149 @@
+$primary: #3292a6;
+$primary-overlay: rgba(50, 146, 156, 0.7);
+$subscribe-color: #252525;
+
+body {
+    margin-top: 90px;
+}
+
+// ### NAVBAR ###
+.navbar {
+    -webkit-box-shadow: 2px 2px 5px $primary;
+            box-shadow: 2px 2px 5px $primary;
+    background: #fff;
+    opacity: 0.9;
+
+    .nav-item {
+        font-size: 1.4rem;
+        padding-right: 20px;
+
+        .nav-link {
+            color: $subscribe-color;
+        }
+
+        .nav-link:hover {
+            color: $primary;
+        }
+    }
+
+    .nav-item:last-child {
+        padding-right: 0;
+    }
+}
+
+// ### HOME SECTION ###
+#showcase {
+    background: url(../assets/mountains.jpg);
+    min-height: 600px;
+    position: relative;
+
+    .primary-overlay {
+        background: $primary-overlay;
+        min-height: 600px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+// ### SUBSCRIBE ###
+#subscribe {
+    background: $subscribe-color;
+}
+// ### ABOUT SECTION ###
+#about {
+    .m-pointer {
+        cursor: pointer;
+    }
+}
+// ### AUTHORS SECTION ###
+#authors {
+    img {
+        margin-top: -50px;
+    }
+    .fa {
+        font-size: 25px;
+    }
+    .card:hover {
+        background: $primary;
+        color: #fff;
+        cursor: pointer;
+        .fa {
+            color: #fff;
+        }
+    }
+}
+
+// FORM SUBMISSION
+.error {
+    -webkit-animation: status 7s ease forwards;
+            animation: status 7s ease forwards;
+}
+@-webkit-keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+.fa-check-circle {
+    font-size: 3rem;
+    color: #007e33;
+}
+.fa-times-circle {
+    font-size: 3rem;
+    color: #cc0000;
+}
+// MEDIA QUERY
+@media (max-width: 991px) {
+    #showcase {
+        h1 {
+            font-size: 6rem;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    #showcase {
+        h1 {
+            font-size: 4.5rem;
+        }
+    }
+    #authors {
+        img {
+            margin-top: 0;
+        }
+    }
+    #showcase,
+    #boxes,
+    #about,
+    #authors,
+    #contact,
+    #footer {
+        .para {
+            font-size: 1.1rem;
+        }
+    }
+}
